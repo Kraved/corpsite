@@ -1,12 +1,10 @@
 @extends('layouts.main')
 
-
-
 @section('content')
     <section class="content  container-fluid  text-center">
     @foreach( $data as $item)
         <article class="news">
-            <h1 class="news-title mb-3"><a href="{{ route('news.show', $item->id) }}">{{ $item->title }}</a></h1>
+            <h1 class="news-title mb-5"><a href="{{ route('news.show', $item->id) }}">{{ $item->title }}</a></h1>
 
             <h4 class="news-text mb-4">{{ $item->text }}</h4>
 

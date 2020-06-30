@@ -1,4 +1,3 @@
-@if(session('success'))
-    {{ session('success') }}
-@endif
+{{ session('success') }}
+
 

@@ -1,3 +1,5 @@
+@extends('layouts.main')
+@section('content')
 <form action="{{ route('news.update', $data->id) }}" method="POST" role="form">
     @method('PATCH')
     @csrf
@@ -15,4 +17,4 @@
 	</div>
 	<button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
+@endsection

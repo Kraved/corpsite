@@ -1,0 +1,53 @@
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1em;
+}
+
+
+// Nav
+.nav {
+    width: 100%;
+    padding: 30px 0;
+
+    & a{
+        font-size: 1.2rem;
+        color: #cd2653;
+    }
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.ellipsis-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-item-menu {
+    position: relative;
+    padding: 0 40px;
+
+    &:after {
+        display: block;
+        position: absolute;
+        top: 70%;
+        left: 30%;
+
+        content: 'Меню';
+        font-size: 1rem;
+    }
+
+    &:hover:after {
+        text-decoration: underline;
+    }
+
+}
+
+// Content

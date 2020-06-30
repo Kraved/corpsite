@@ -1,6 +1,5 @@
-@if($errors->any())
-    {{$errors->first()}}
-@endif
+{{$errors->first()}}
+
 
 
 

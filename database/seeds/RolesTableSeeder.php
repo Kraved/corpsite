@@ -11,7 +11,10 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-        $data = ['name' => 'admin'];
+        $data = [
+            ['name' => 'admin'],
+            ['name' => 'user'],
+        ];
         \Illuminate\Support\Facades\DB::table('roles')->insert($data);
     }
 }

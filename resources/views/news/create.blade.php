@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
 <form action="{{ route('news.store') }}" method="POST" role="form">

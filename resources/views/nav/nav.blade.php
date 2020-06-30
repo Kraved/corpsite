@@ -1,6 +1,6 @@
 <nav class="container-fluid">
-    <div class="row justify-content-between nav">
-        <div class="col-2 nav-logo">
+    <div class="nav  row justify-content-between">
+        <div class="nav-logo  col-2">
             <a href="{{ route('news.index') }}"><img class="logo" src="{{ asset('images/logo.png') }}" alt="logo"></a>
         </div>
 
@@ -13,7 +13,8 @@
             <div class="nav-item"><a href="">Заявки в IT</a></div>
             <div class="nav-item">
                 <a class="nav-item-menu" href=""><img class="ellipsis-icon" src="{{ asset('images/ellipsis.svg') }}"
-                                                      alt="ellipsis"></a>
+                                                      alt="ellipsis">
+                </a>
             </div>
         </div>
 

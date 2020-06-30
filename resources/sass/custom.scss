@@ -6,6 +6,11 @@
 
 html {
     font-size: 1em;
+
+}
+
+body {
+    font-family: 'Helvetica Neue',Helvetica,'Segoe UI',Arial,sans-serif;
 }
 
 
@@ -51,3 +56,26 @@ html {
 }
 
 // Content
+.content {
+    background-color: #f5efe0;
+    padding-top: 100px;
+}
+
+.news {
+    width: 50%;
+    margin: 0 auto 100px;
+}
+
+.news-title {
+    text-decoration: none;
+    font-size: 4rem;
+
+    & a{
+        color: black;
+    }
+}
+
+.news-text {
+    font-size: 1.5rem;
+}
+

@@ -20,7 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<main class="py-4">
+<main class="main">
     @include('nav.nav')
 {{--    Добавить отображение navbar в зависимости от аутентификации --}}
     @if($errors->any())

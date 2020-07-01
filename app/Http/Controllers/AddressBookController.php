@@ -19,7 +19,7 @@ class AddressBookController extends Controller
      */
     public function index(AddressBook $model)
     {
-        $data = $model->paginate(10);
+        $data = $model->paginate(25);
         return view('addressbook.index', compact('data'));
     }
 

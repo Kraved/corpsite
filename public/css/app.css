@@ -10942,6 +10942,13 @@ body {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
 }
 
+.content-title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
 .nav {
   width: 100%;
   padding: 30px 0;
@@ -11049,13 +11056,6 @@ body {
   text-decoration: underline;
 }
 
-.content-title {
-  text-align: center;
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 50px;
-}
-
 .birthday {
   width: 60%;
   margin: 0 auto 50px;
@@ -11069,5 +11069,24 @@ body {
 
 .birthday-text {
   font-style: italic;
+}
+
+.links {
+  width: 60%;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.link {
+  margin-bottom: 10px;
+}
+
+.link-text {
+  color: #cd2653;
+  font-size: 1.5rem;
+}
+
+.link-text:hover {
+  color: #cd2653;
 }
 

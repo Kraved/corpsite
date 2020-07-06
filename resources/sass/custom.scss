@@ -14,6 +14,14 @@ body {
 }
 
 
+.content-title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+
+    margin-bottom: 50px;
+}
+
 // Nav
 .nav {
     width: 100%;
@@ -135,14 +143,6 @@ body {
 
 
 // Birth Day Page
-.content-title {
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 700;
-
-    margin-bottom: 50px;
-}
-
 
 .birthday {
     width: 60%;
@@ -151,6 +151,9 @@ body {
     text-align:center;
 }
 
+
+
+
 .birthday-title {
     font-size: 1.5rem;
     font-style: oblique;
@@ -158,4 +161,24 @@ body {
 
 .birthday-text {
     font-style: italic;
+}
+
+// Links Page
+.links {
+    width: 60%;
+    margin: 0 auto 50px;
+
+    text-align:center;
+}
+
+.link {
+    margin-bottom: 10px;
+}
+
+.link-text {
+    color: #cd2653;
+    font-size: 1.5rem;
+    &:hover {
+        color: #cd2653;
+    }
 }

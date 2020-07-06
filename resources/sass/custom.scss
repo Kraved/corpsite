@@ -57,7 +57,7 @@ body {
 
 // Content
 
-// News
+// News Page
 .content {
     background-color: #f5efe0;
     padding-top: 100px;
@@ -85,8 +85,48 @@ body {
     font-size: 1.3rem;
 }
 
-// Address Book
+// Address Book Page
 
 .addressbook-title {
     font-size: 4rem;
+}
+
+// Documents Page
+
+.regulations-title,
+.templates-title {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+
+.document {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    margin: 0 auto;
+
+}
+
+.document-name {
+    color: #cd2653;
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    &:hover{
+        color: #cd2653;
+    }
+}
+
+.document-btn {
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+
+    background-color: #cd2653;
+    &:hover {
+        color: white;
+        text-decoration: underline;
+    }
 }

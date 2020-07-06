@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\AddressBook;
+use App\Model\AddressBook;
 use Illuminate\Contracts\View\Factory;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\View\View;
 
 class AddressBookController extends Controller

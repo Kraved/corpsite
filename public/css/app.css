@@ -11011,3 +11011,39 @@ body {
   font-size: 4rem;
 }
 
+.regulations-title,
+.templates-title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.document {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  margin: 0 auto;
+}
+
+.document-name {
+  color: #cd2653;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.document-name:hover {
+  color: #cd2653;
+}
+
+.document-btn {
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  background-color: #cd2653;
+}
+
+.document-btn:hover {
+  color: white;
+  text-decoration: underline;
+}
+

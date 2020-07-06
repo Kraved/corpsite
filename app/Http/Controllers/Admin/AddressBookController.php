@@ -4,8 +4,7 @@
 namespace App\Http\Controllers\Admin;
 
 
-use App\AddressBook;
-use App\Model\News;
+use App\Model\AddressBook;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;

@@ -8,7 +8,7 @@
             <div class="nav-item"><a href="{{ route('news.index') }}">Новости</a></div>
             <div class="nav-item"><a href="{{ route('documents.index') }}">Шаблоны документов</a></div>
             <div class="nav-item"><a href="{{ route('addressbook.index') }}">Адресная книга</a></div>
-            <div class="nav-item"><a href="">Дни Рождения</a></div>
+            <div class="nav-item"><a href="{{ route('birthdays.index') }}">Дни Рождения</a></div>
             <div class="nav-item"><a href="">Полезные ссылки</a></div>
             <div class="nav-item"><a href="">Заявки в IT</a></div>
             <div class="nav-item">

@@ -11008,7 +11008,9 @@ body {
 }
 
 .addressbook-title {
+  text-align: center;
   font-size: 4rem;
+  font-weight: 700;
 }
 
 .regulations-title,
@@ -11045,5 +11047,27 @@ body {
 .document-btn:hover {
   color: white;
   text-decoration: underline;
+}
+
+.content-title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.birthday {
+  width: 60%;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.birthday-title {
+  font-size: 1.5rem;
+  font-style: oblique;
+}
+
+.birthday-text {
+  font-style: italic;
 }
 

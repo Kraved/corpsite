@@ -88,7 +88,9 @@ body {
 // Address Book Page
 
 .addressbook-title {
+    text-align: center;
     font-size: 4rem;
+    font-weight: 700;
 }
 
 // Documents Page
@@ -129,4 +131,31 @@ body {
         color: white;
         text-decoration: underline;
     }
+}
+
+
+// Birth Day Page
+.content-title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+
+    margin-bottom: 50px;
+}
+
+
+.birthday {
+    width: 60%;
+    margin: 0 auto 50px;
+
+    text-align:center;
+}
+
+.birthday-title {
+    font-size: 1.5rem;
+    font-style: oblique;
+}
+
+.birthday-text {
+    font-style: italic;
 }

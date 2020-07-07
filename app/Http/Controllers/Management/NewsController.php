@@ -1,17 +1,23 @@
 <?php
 
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Management;
 
 
+use App\Http\Controllers\Controller;
 use App\Model\News;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class NewsController
+class NewsController extends Controller
 {
+
+    public function __construct()
+    {
+//        $this->middleware('roles:moderator');
+    }
 
     /**
      * Display a listing of the resource.

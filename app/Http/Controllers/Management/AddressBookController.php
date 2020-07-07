@@ -1,17 +1,25 @@
 <?php
 
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Management;
 
 
+use App\Http\Controllers\Controller;
 use App\Model\AddressBook;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class AddressBookController
+class AddressBookController extends Controller
 {
+
+    public function __construct()
+    {
+//        $this->middleware('roles:manager');
+    }
+
+
    /**
      * Display a listing of the resource.
      *
@@ -21,7 +29,7 @@ class AddressBookController
     public function index(AddressBook $model)
     {
         $data = $model->paginate(50);
-        return view('admin.addressbook.index', compact('data'));
+        return view('addressbook.management.index', compact('data'));
     }
 
 

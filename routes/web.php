@@ -21,7 +21,7 @@ Route::resource('addressbook', 'AddressBookController')->only('index');
 Route::resource('documents', 'DocumentsController')->only('index');
 Route::resource('birthdays', 'BirthDayController')->only('index');
 Route::resource('links', 'LinksController')->only('index');
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+Route::group(['namespace' => 'Management', 'prefix' => 'management'], function () {
     Route::resource('addressbook', 'AddressBookController')
         ->except('show')
         ->names('admin.addressbook');

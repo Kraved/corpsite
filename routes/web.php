@@ -24,10 +24,10 @@ Route::resource('links', 'LinksController')->only('index');
 Route::group(['namespace' => 'Management', 'prefix' => 'management'], function () {
     Route::resource('addressbook', 'AddressBookController')
         ->except('show')
-        ->names('admin.addressbook');
+        ->names('management.addressbook');
     Route::resource('news', 'NewsController')
         ->except('show')
-        ->names('admin.news');
+        ->names('management.news');
 });
 
 Auth::routes();

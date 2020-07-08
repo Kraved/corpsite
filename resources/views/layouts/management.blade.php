@@ -13,6 +13,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- Подключение редактора  nicEdit-->
     <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script>
+    <!-- Редактор nicEdit будет включен на всех textarea!! -->
     <script type="text/javascript">
         //<![CDATA[
         bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });

@@ -151,9 +151,6 @@ body {
     text-align:center;
 }
 
-
-
-
 .birthday-title {
     font-size: 1.5rem;
     font-style: oblique;
@@ -163,7 +160,9 @@ body {
     font-style: italic;
 }
 
+
 // Links Page
+
 .links {
     width: 60%;
     margin: 0 auto 50px;
@@ -181,4 +180,23 @@ body {
     &:hover {
         color: #cd2653;
     }
+}
+
+
+// MANAGEMENT
+
+// News Page
+
+.management-create-btn {
+    margin: 0 15px 10px 0;
+
+    text-align: right;
+}
+
+// News Edit Page
+.management {
+    width: 50%;
+    margin: 0 auto;
+
+    text-align: center;
 }

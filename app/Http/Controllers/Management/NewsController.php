@@ -22,13 +22,13 @@ class NewsController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param News $news
+     * @param News $model
      * @return Factory|View
      */
-    public function index(News $news)
+    public function index(News $model)
     {
-        $data = $news->paginate(10);
-        return view('news.admin.index', compact('data'));
+        $data = $model->paginate(50);
+        return view('news.management.index', compact('data'));
     }
 
 
@@ -40,7 +40,7 @@ class NewsController extends Controller
     public function create()
     {
         // Сделать проверку группы moderator, или admin
-        return view('news.admin.create');
+        return view('news.management.create');
     }
 
     /**
@@ -59,7 +59,7 @@ class NewsController extends Controller
         $result = $model->create($data);
         if ($result) {
             return redirect()
-                ->route('news.admin.index')
+                ->route('news.management.index')
                 ->with(['success' => 'Запись успешно добавлена']);
         } else {
             return back()
@@ -80,7 +80,7 @@ class NewsController extends Controller
     {
         // Сделать проверку группы moderator, admin или владелец
         $data = News::find($id);
-        return view('news.admin.edit', compact('data'));
+        return view('news.management.edit', compact('data'));
     }
 
     /**
@@ -100,7 +100,7 @@ class NewsController extends Controller
         $result = $record->fill($request->all())->save();
         if ($result) {
             return redirect()
-                ->route('admin.news.index')
+                ->route('news.management.index')
                 ->with(['success' => 'Запись успешно изменена']);
         } else {
             return back()
@@ -122,7 +122,7 @@ class NewsController extends Controller
         $result = $record->delete();
         if ($result) {
             return redirect()
-                ->route('admin.news.index')
+                ->route('news.management.index')
                 ->with(['success' => 'Запись успешно удалена']);
         } else {
             return back()

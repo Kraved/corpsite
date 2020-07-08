@@ -6,7 +6,7 @@
         <article class="news">
             <h1 class="news-title mb-5"><a href="{{ route('news.show', $item->id) }}">{{ $item->title }}</a></h1>
 
-            <h4 class="news-text mb-4">{{ $item->text }}</h4>
+            <h4 class="news-text mb-4">{!! $item->text !!}</h4>
 
             <div class="news-info  d-flex  justify-content-between">
                 <div class="news-author">{{ $item->author }}</div>

@@ -36,7 +36,7 @@
                     <div class="d-flex m-auto flex-column w-75">
                         <label>
                             Автор:
-                            <input class="form-control" type="text" value="{{ $data->author }}" disabled>
+                            <input class="form-control" type="text" value="{{ $data->user->name }}" disabled>
                         </label>
                         <label>
                             Создано:

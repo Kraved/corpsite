@@ -17,10 +17,11 @@ class CreateNewsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('text');
-            $table->string('author');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
             $table->boolean('published')->default(true);
             $table->softDeletes();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

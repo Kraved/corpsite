@@ -13,12 +13,12 @@ class NewsTableSeeder extends Seeder
     {
         $data = [];
         $faker = \Faker\Factory::create();
-        for ($i = 0; $i < 10; $i++) {
-            $author = rand(0, 1) ? 'admin' : 'user';
+        for ($i = 0; $i < 30; $i++) {
+            $author = rand(1, 2);
             $data[] = [
                 'title' => $faker->text(50),
                 'text' => $faker->realText(200),
-                'author' => $author,
+                'user_id' => $author,
                 'published' => $faker->boolean(60),
                 'created_at' => $faker->dateTimeBetween('-1 Year'),
             ];

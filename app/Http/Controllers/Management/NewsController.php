@@ -27,7 +27,9 @@ class NewsController extends Controller
      */
     public function index(News $model)
     {
-        $data = $model->paginate(50);
+        $data = $model
+            ->with(['user:id,name'])
+            ->paginate(25);
         return view('news.management.index', compact('data'));
     }
 
@@ -53,7 +55,7 @@ class NewsController extends Controller
     {
         // Сделать проверку группы moderator, или admin
         $data = $request->all();
-        $data['author'] = 'test';
+        $data['user_id'] = 2;
 //        $data['author'] = Auth::user();
         $model = new News();
         $result = $model->create($data);
@@ -96,7 +98,7 @@ class NewsController extends Controller
         $record = News::find($id);
         $data = $request->all();
         //        $data['author'] = Auth::user();
-        $data['author'] = 'test';
+        $data['user_id'] = 2;
         $result = $record->fill($request->all())->save();
         if ($result) {
             return redirect()

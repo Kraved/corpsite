@@ -8,7 +8,7 @@
                 <h4 class="news-text mb-4">{!! $data->text !!}  </h4>
 
                 <div class="news-info  d-flex  justify-content-between">
-                    <div class="news-author">{{ $data->author }}</div>
+                    <div class="news-author">{{ $data->user->name }}</div>
                     <div class="news-date">{{ $data->created_at }}</div>
                 </div>
             </article>

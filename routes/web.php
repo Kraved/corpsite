@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/test', "TestController@index");
+Route::get('/test', "TestController@index");
 
 Route::resource('news', 'NewsController')->only('index', 'show');
 Route::resource('addressbook', 'AddressBookController')->only('index');
@@ -24,10 +24,10 @@ Route::resource('links', 'LinksController')->only('index');
 Route::group(['namespace' => 'Management', 'prefix' => 'management'], function () {
     Route::resource('addressbook', 'AddressBookController')
         ->except('show')
-        ->names('management.addressbook');
+        ->names('addressbook.management');
     Route::resource('news', 'NewsController')
         ->except('show')
-        ->names('management.news');
+        ->names('news.management');
 });
 
 Auth::routes();

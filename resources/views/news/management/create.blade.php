@@ -3,7 +3,7 @@
     <section class="management">
         <h1 class="management-title">Добавить запись</h1>
         <form class=""  action="{{ route('news.management.store') }}" method="POST" role="form">
-            @method('GET')
+            @method('POST')
             @csrf
             <div class="form-group">
                 <label for="title">Введите заголовок: </label>

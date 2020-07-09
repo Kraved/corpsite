@@ -29,6 +29,7 @@ class NewsController extends Controller
     {
         $data = $model
             ->with(['user:id,name'])
+            ->orderByDesc('id')
             ->paginate(25);
         return view('news.management.index', compact('data'));
     }

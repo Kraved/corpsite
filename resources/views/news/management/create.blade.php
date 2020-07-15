@@ -25,7 +25,7 @@
                     Нет
                 </label>
             </div>
-            <button type="submit" class="btn btn-primary">Редактировать</button>
+            <button type="submit" class="btn btn-primary">Добавить</button>
         </form>
     </section>
 @endsection

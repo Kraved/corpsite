@@ -28,6 +28,9 @@ Route::group(['namespace' => 'Management', 'prefix' => 'management'], function (
     Route::resource('news', 'NewsController')
         ->except('show')
         ->names('news.management');
+    Route::resource('documents', 'DocumentsController')
+        ->except('edit', 'update')
+        ->names('documents.management');
 });
 
 Auth::routes();

@@ -58,7 +58,7 @@ class AddressBookController extends Controller
         $result = $model->create($data);
         if ($result) {
             return redirect()
-                ->route('')
+                ->route('addressbook.management.index')
                 ->with(['success' => 'Запись успешно добавлена']);
         } else {
             return back()
@@ -77,7 +77,7 @@ class AddressBookController extends Controller
     {
         // Сделать проверку группы moderator, admin
         $data = AddressBook::find($id);
-        return view('', compact('data'));
+        return view('addressbook.management.edit', compact('data'));
     }
 
     /**
@@ -94,7 +94,7 @@ class AddressBookController extends Controller
         $result = $record->fill($request->all())->save();
         if ($result) {
             return redirect()
-                ->route('')
+                ->route('addressbook.management.index')
                 ->with(['success' => 'Запись изменена добавлена']);
         } else {
             return back()
@@ -116,7 +116,7 @@ class AddressBookController extends Controller
         $result = $record->delete();
         if ($result) {
             return redirect()
-                ->route('')
+                ->route('addressbook.management.index')
                 ->with(['success' => 'Запись успешно удалена']);
         } else {
             return back()

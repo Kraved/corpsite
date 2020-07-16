@@ -12,13 +12,14 @@ class AddressBookTableSeeder extends Seeder
     public function run()
     {
         $data = [];
-        for ($i = 1; $i < 20; $i++) {
+        $faker = \Faker\Factory::create();
+        for ($i = 1; $i < 60; $i++) {
             $data[] = [
                 'company' => 'Lex Systems',
-                'full_name' => "$i",
-                'number' => "123456",
+                'full_name' => "$faker->firstName $faker->lastName",
+                'number' => $faker->e164PhoneNumber,
                 'add_number' => "10$i",
-                'email' => "$i@lexsystems.ru",
+                'email' => $faker->email,
                 'cabinet' => "cabinet $i",
             ];
         }

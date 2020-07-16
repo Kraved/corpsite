@@ -82,7 +82,7 @@ class NewsController extends Controller
     public function edit($id)
     {
         // Сделать проверку группы moderator, admin или владелец
-        $data = News::find($id);
+        $data = News::findOrFail($id);
         return view('news.management.edit', compact('data'));
     }
 
@@ -96,7 +96,7 @@ class NewsController extends Controller
     public function update(Request $request, $id)
     {
         // Сделать проверку группы moderator, admin или владелец
-        $record = News::find($id);
+        $record = News::findOrFail($id);
         $data = $request->all();
         //        $data['author'] = Auth::user();
         $data['user_id'] = 2;
@@ -121,7 +121,7 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        $record = News::find($id);
+        $record = News::findOrFail($id);
         $result = $record->delete();
         if ($result) {
             return redirect()

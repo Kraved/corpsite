@@ -76,7 +76,7 @@ class AddressBookController extends Controller
     public function edit(int $id)
     {
         // Сделать проверку группы moderator, admin
-        $data = AddressBook::find($id);
+        $data = AddressBook::findOrFail($id);
         return view('addressbook.management.edit', compact('data'));
     }
 
@@ -90,7 +90,7 @@ class AddressBookController extends Controller
     public function update(Request $request, $id)
     {
         // Сделать проверку группы moderator, admin
-        $record = AddressBook::find($id);
+        $record = AddressBook::findOrFail($id);
         $result = $record->fill($request->all())->save();
         if ($result) {
             return redirect()
@@ -112,7 +112,7 @@ class AddressBookController extends Controller
      */
     public function destroy($id)
     {
-        $record = AddressBook::find($id);
+        $record = AddressBook::findOrFail($id);
         $result = $record->delete();
         if ($result) {
             return redirect()

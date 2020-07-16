@@ -8,7 +8,7 @@
             <div class="nav-item"><a href="{{ route('news.index') }}">Новости</a></div>
             <div class="nav-item"><a href="{{ route('documents.index') }}">Шаблоны документов</a></div>
             <div class="nav-item"><a href="{{ route('addressbook.index') }}">Адресная книга</a></div>
-            <div class="nav-item"><a href="{{ route('birthdays.index') }}">Дни Рождения</a></div>
+            <div class="nav-item"><a href="{{ route('birthday.index') }}">Дни Рождения</a></div>
             <div class="nav-item"><a href="{{ route('links.index') }}">Полезные ссылки</a></div>
             <div class="nav-item"><a href="https://help2.admin24.ru/f4ae33f3cd0f0d3b49509396972f7eb9">Заявки в IT</a></div>
             <div class="nav-item">

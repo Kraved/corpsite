@@ -19,7 +19,7 @@ Route::get('/test', "TestController@index");
 Route::resource('news', 'NewsController')->only('index', 'show');
 Route::resource('addressbook', 'AddressBookController')->only('index');
 Route::resource('documents', 'DocumentsController')->only('index');
-Route::resource('birthdays', 'BirthDayController')->only('index');
+Route::resource('birthday', 'BirthDayController')->only('index');
 Route::resource('links', 'LinksController')->only('index');
 Route::group(['namespace' => 'Management', 'prefix' => 'management'], function () {
     Route::resource('addressbook', 'AddressBookController')
@@ -31,6 +31,9 @@ Route::group(['namespace' => 'Management', 'prefix' => 'management'], function (
     Route::resource('documents', 'DocumentsController')
         ->except('edit', 'update')
         ->names('documents.management');
+    Route::resource('birthday', 'BirthDayController')
+        ->only('index', 'edit', 'update')
+        ->names('birthday.management');
 });
 
 Auth::routes();

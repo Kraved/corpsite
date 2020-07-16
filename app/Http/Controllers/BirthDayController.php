@@ -22,8 +22,7 @@ class BirthDayController extends Controller
      */
     public function index(BirthDay $model)
     {
-        $data = $model->get();
-        $data = $data->keyBy('month');
+        $data = $model->first();
 
         return view('birthday.index', compact('data'));
     }

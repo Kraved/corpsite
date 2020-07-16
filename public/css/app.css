@@ -11101,3 +11101,8 @@ body {
   text-align: center;
 }
 
+.birthday__text {
+  width: 100%;
+  height: 600px;
+}
+

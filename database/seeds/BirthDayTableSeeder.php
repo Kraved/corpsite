@@ -11,9 +11,10 @@ class BirthDayTableSeeder extends Seeder
      */
     public function run()
     {
-        $data = [
-            ['month' => 'January', 'text' =>
+        $data = [ 'text' =>
                 <<<STR1
+                    January
+
                      Сагалатый Иван Васильевич – 01.01.
 
                     Шуминов Натан – 11.01.
@@ -29,19 +30,7 @@ class BirthDayTableSeeder extends Seeder
                     Ходжабекян Лусине – 22.01.
 
                     Изотова Альбина – 25.01.
-                STR1],
-            ['month' => 'February', 'text' => 'qweqwe'],
-            ['month' => 'March', 'text' => 'eqw'],
-            ['month' => 'April', 'text' => 'qwe'],
-            ['month' => 'May', 'text' => 'qwe'],
-            ['month' => 'June', 'text' => 'qwe'],
-            ['month' => 'July', 'text' => 'qwe'],
-            ['month' => 'August', 'text' => 'qwe'],
-            ['month' => 'September', 'text' => 'qwe'],
-            ['month' => 'October', 'text' => 'qwe'],
-            ['month' => 'November', 'text' => 'qwe'],
-            ['month' => 'December', 'text' => 'qwe'],
-        ];
+                STR1];
 
         \Illuminate\Support\Facades\DB::table('birth_days')->insert($data);
     }

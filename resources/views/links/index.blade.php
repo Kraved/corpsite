@@ -6,7 +6,7 @@
             <h1 class="content-title">Ссылки</h1>
             @foreach($data as $link)
                 <div class="link">
-                    <a class="link-text" href="http://{{ $link->url }}">{{ $link->name }}</a>
+                    <a class="link-text" href="{{ $link->url }}">{{ $link->name }}</a>
                 </div>
             @endforeach
         </article>

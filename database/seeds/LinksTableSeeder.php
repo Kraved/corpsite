@@ -12,9 +12,9 @@ class LinksTableSeeder extends Seeder
     public function run()
     {
         $data = [
-            ['name' => 'Яндекс', 'url' => 'yandex.ru'],
-            ['name' => 'Mail', 'url' => 'mail.ru'],
-            ['name' => 'Twitch', 'url' => 'twitch.tv'],
+            ['name' => 'Яндекс', 'url' => 'http://yandex.ru'],
+            ['name' => 'Mail', 'url' => 'http://mail.ru'],
+            ['name' => 'Twitch', 'url' => 'http://twitch.tv'],
         ];
         \Illuminate\Support\Facades\DB::table('links')->insert($data);
     }

@@ -34,7 +34,11 @@ Route::group(['namespace' => 'Management', 'prefix' => 'management'], function (
     Route::resource('birthday', 'BirthDayController')
         ->only('index', 'edit', 'update')
         ->names('birthday.management');
+    Route::resource('links', 'LinksController')
+        ->except('show', 'edit', 'update')
+        ->names('links.management');
 });
+
 
 Auth::routes();
 

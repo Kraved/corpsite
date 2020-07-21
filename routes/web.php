@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/test', "TestController@index");
 Route::get('/home', "NewsController@index");
+Route::get('/', "NewsController@index");
 
 Route::resource('news', 'NewsController')->only('index', 'show');
 Route::resource('addressbook', 'AddressBookController')->only('index');

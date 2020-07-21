@@ -13,6 +13,7 @@ class RolesTableSeeder extends Seeder
     {
         $data = [
             ['name' => 'admin'],
+            ['name' => 'manager'],
             ['name' => 'user'],
         ];
         \Illuminate\Support\Facades\DB::table('roles')->insert($data);

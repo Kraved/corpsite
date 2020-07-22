@@ -10978,13 +10978,17 @@ body {
   display: block;
   position: absolute;
   top: 70%;
-  left: 30%;
-  content: "\41C\435\43D\44E";
+  left: 6%;
+  content: "\423\43F\440\430\432\43B\435\43D\438\435";
   font-size: 1rem;
 }
 
 .nav-item-menu:hover:after {
   text-decoration: underline;
+}
+
+.management-dropdown-menu {
+  top: 200%;
 }
 
 .content {

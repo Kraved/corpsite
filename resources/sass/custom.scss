@@ -51,9 +51,9 @@ body {
         display: block;
         position: absolute;
         top: 70%;
-        left: 30%;
+        left: 6%;
 
-        content: 'Меню';
+        content: 'Управление';
         font-size: 1rem;
     }
 
@@ -61,6 +61,10 @@ body {
         text-decoration: underline;
     }
 
+}
+
+.management-dropdown-menu {
+    top: 200%;
 }
 
 // Content
@@ -208,3 +212,5 @@ body {
     width: 100%;
     height: 600px;
 }
+
+

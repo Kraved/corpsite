@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Management;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Management\DocumentRequest;
 use App\Model\Documents;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 
@@ -15,7 +16,7 @@ class DocumentsController extends Controller
 
     public function __construct()
     {
-        $this->middleware('roles:manager');
+        $this->middleware('role:manager');
     }
 
     /**
@@ -40,26 +41,25 @@ class DocumentsController extends Controller
      */
     public function create()
     {
-        // Сделать проверку группы moderator, или admin
+
         return view('documents.management.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
+     * @param DocumentRequest $request
      * @return RedirectResponse
      */
-    public function store(Request $request)
+    public function store(DocumentRequest $request)
     {
-        // Сделать проверку группы moderator, или admin
+
         $data['name'] = $request->name;
         $data['type'] = $request->type;
         $data['path'] = $request->file('file')
             ->storeAs($request->type, $request->name . "." . $request->file('file')
                     ->getClientOriginalExtension(), 'public');
-        $data['user_id'] = 2;
-//        $data['user_id'] = Auth::user();
+        $data['user_id'] = Auth::user()->id;
         $result = Documents::create($data);
         if ($result) {
             return redirect()

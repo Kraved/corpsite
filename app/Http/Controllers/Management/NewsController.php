@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Management;
 
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Management\NewsRequest;
 use App\Model\News;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class NewsController extends Controller
@@ -16,7 +16,7 @@ class NewsController extends Controller
 
     public function __construct()
     {
-        $this->middleware('roles:manager');
+        $this->middleware('role:manager');
     }
 
     /**
@@ -42,22 +42,21 @@ class NewsController extends Controller
      */
     public function create()
     {
-        // Сделать проверку группы moderator, или admin
+
         return view('news.management.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
+     * @param NewsRequest $request
      * @return RedirectResponse
      */
-    public function store(Request $request)
+    public function store(NewsRequest $request)
     {
-        // Сделать проверку группы moderator, или admin
+
         $data = $request->all();
-        $data['user_id'] = 2;
-//        $data['author'] = Auth::user();
+        $data['user_id'] = Auth::user()->id;
         $model = new News();
         $result = $model->create($data);
         if ($result) {
@@ -89,17 +88,16 @@ class NewsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
+     * @param NewsRequest $request
      * @param  int  $id
      * @return RedirectResponse
      */
-    public function update(Request $request, $id)
+    public function update(NewsRequest $request, $id)
     {
         // Сделать проверку группы moderator, admin или владелец
         $record = News::findOrFail($id);
         $data = $request->all();
-        //        $data['author'] = Auth::user();
-        $data['user_id'] = 2;
+        $data['user_id'] = Auth::user()->id;
         $result = $record->fill($request->all())->save();
         if ($result) {
             return redirect()

@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Management;
 
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Management\AddressBookRequest;
 use App\Model\AddressBook;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class AddressBookController extends Controller
@@ -16,7 +16,7 @@ class AddressBookController extends Controller
 
     public function __construct()
     {
-        $this->middleware('roles:manager');
+        $this->middleware('role:manager');
     }
 
 
@@ -40,20 +40,18 @@ class AddressBookController extends Controller
      */
     public function create()
     {
-        // Сделать проверку группы moderator, admin
         return view('addressbook.management.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
+     * @param AddressBookRequest $request
      * @param AddressBook $model
      * @return RedirectResponse
      */
-    public function store(Request $request, AddressBook $model)
+    public function store(AddressBookRequest $request, AddressBook $model)
     {
-        // Сделать проверку группы moderator, admin
         $data = $request->all();
         $result = $model->create($data);
         if ($result) {
@@ -75,7 +73,6 @@ class AddressBookController extends Controller
      */
     public function edit(int $id)
     {
-        // Сделать проверку группы moderator, admin
         $data = AddressBook::findOrFail($id);
         return view('addressbook.management.edit', compact('data'));
     }
@@ -83,13 +80,12 @@ class AddressBookController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
+     * @param AddressBookRequest $request
      * @param int $id
      * @return RedirectResponse
      */
-    public function update(Request $request, $id)
+    public function update(AddressBookRequest $request, $id)
     {
-        // Сделать проверку группы moderator, admin
         $record = AddressBook::findOrFail($id);
         $result = $record->fill($request->all())->save();
         if ($result) {

@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Management;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Management\LinksRequest;
 use App\Model\Links;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use Illuminate\View\View;
 
@@ -15,7 +15,7 @@ class LinksController extends Controller
 
     public function __construct()
     {
-        $this->middleware('roles:manager');
+        $this->middleware('role:manager');
     }
 
     /**
@@ -42,10 +42,10 @@ class LinksController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
+     * @param LinksRequest $request
      * @return RedirectResponse|Redirector
      */
-    public function store(Request $request)
+    public function store(LinksRequest $request)
     {
         $data = $request->all();
         $result = Links::create($data);

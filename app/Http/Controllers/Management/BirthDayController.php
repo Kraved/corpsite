@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Management;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Management\BirthDayRequest;
 use App\Model\BirthDay;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class BirthDayController extends Controller
@@ -14,7 +14,7 @@ class BirthDayController extends Controller
 
     public function __construct()
     {
-        $this->middleware('roles:manager');
+        $this->middleware('role:manager');
     }
 
     /**
@@ -43,11 +43,11 @@ class BirthDayController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
+     * @param BirthDayRequest $request
      * @param int $id
      * @return RedirectResponse
      */
-    public function update(Request $request, $id)
+    public function update(BirthDayRequest $request, $id)
     {
         $data = $request->all();
         $result = app(BirthDay::class)->findOrFail($id)->update($data);

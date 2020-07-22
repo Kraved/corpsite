@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="management-content">
-        <div class="management-create-btn">
+        <div class="management-create-btn text-left ml-2">
             <a class="btn btn-primary" href="{{ route('news.management.create') }}">Добавить</a>
         </div>
         @if($data->all() > $data->count())

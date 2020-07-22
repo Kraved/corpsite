@@ -20,7 +20,7 @@ class CreateAddressBooksTable extends Migration
             $table->string('number');
             $table->string('add_number');
             $table->string('email');
-            $table->string('cabinet');
+            $table->string('cabinet')->nullable();
             $table->timestamps();
         });
     }

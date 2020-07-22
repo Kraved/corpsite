@@ -30,7 +30,7 @@
                 <input type="text" class="form-control" name="cabinet" id="cabinet" value="{{ $data->cabinet }}">
             </div>
 
-            <button type="submit" class="btn btn-primary">Редактировать</button>
+            <button type="submit" class="btn btn-success">Редактировать</button>
         </form>
     </section>
 @endsection

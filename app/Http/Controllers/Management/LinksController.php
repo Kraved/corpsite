@@ -12,6 +12,12 @@ use Illuminate\View\View;
 
 class LinksController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('roles:manager');
+    }
+
     /**
      * Display a listing of the resource.
      *

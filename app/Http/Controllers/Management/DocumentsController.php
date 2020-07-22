@@ -15,7 +15,7 @@ class DocumentsController extends Controller
 
     public function __construct()
     {
-//        $this->middleware('roles:moderator');
+        $this->middleware('roles:manager');
     }
 
     /**

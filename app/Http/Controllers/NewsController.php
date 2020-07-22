@@ -12,7 +12,7 @@ class NewsController extends Controller
 
     public function __construct()
     {
-//        $this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
@@ -23,7 +23,8 @@ class NewsController extends Controller
      */
     public function index(News $news)
     {
-        $data = $news->wherePublished('1')
+
+        $data = $news->wherePublished(1)
             ->orderByDesc('id')
             ->paginate(10);
         return view('news.index', compact('data'));

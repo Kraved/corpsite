@@ -16,7 +16,7 @@ class AddressBookController extends Controller
 
     public function __construct()
     {
-//        $this->middleware('roles:manager');
+        $this->middleware('roles:manager');
     }
 
 

@@ -68,5 +68,14 @@ trait HasRole
         return true;
     }
 
+    public function swapRoles(string $userName, array $rolesArray)
+    {
+        User::whereName($userName)->first()->roles()->detach();
+        foreach ($rolesArray as $role) {
+            $this->addRole($userName, $role);
+        }
+        return true;
+    }
+
 }
 

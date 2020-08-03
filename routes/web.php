@@ -40,6 +40,14 @@ Route::group(['namespace' => 'Management', 'prefix' => 'management'], function (
         ->names('links.management');
 });
 
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function (){
+    Route::resource('users', 'UsersController')
+        ->except('show', 'create', 'store')
+        ->names('admin.users');
+    Route::resource('roles', 'RolesController')
+        ->names('admin.roles');
+});
+
 
 Auth::routes();
 

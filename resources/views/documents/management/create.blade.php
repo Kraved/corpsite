@@ -2,7 +2,7 @@
 @section('content')
     <section class="management">
         <h1 class="management-title">Добавить документ</h1>
-        <form class=""  action="{{ route('documents.management.store') }}" method="POST" role="form" enctype=multipart/form-data>
+        <form action="{{ route('documents.management.store') }}" method="POST" enctype=multipart/form-data>
             @method('POST')
             @csrf
             <div class="form-group">

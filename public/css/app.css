@@ -11094,19 +11094,40 @@ body {
   color: #cd2653;
 }
 
-.management-create-btn {
-  margin: 0 15px 10px 0;
-  text-align: right;
-}
-
 .management {
   width: 70%;
   margin: 0 auto;
   text-align: center;
 }
 
+.management-create-btn {
+  margin: 0 15px 10px 15px;
+  text-align: left;
+}
+
 .birthday__text {
   width: 100%;
   height: 600px;
+}
+
+.admin {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.admin-create-btn {
+  margin: 0 15px 10px 0;
+  text-align: left;
+}
+
+.user-group-panel__item {
+  position: relative;
+}
+
+.button-close {
+  position: absolute;
+  right: 0;
+  top: 1px;
 }
 

@@ -68,6 +68,12 @@ trait HasRole
         return true;
     }
 
+    /**
+     * Замена всех ролей для указанного пользователя
+     * @param string $userName
+     * @param array $rolesArray
+     * @return bool
+     */
     public function swapRoles(string $userName, array $rolesArray)
     {
         User::whereName($userName)->first()->roles()->detach();

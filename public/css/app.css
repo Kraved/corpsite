@@ -10991,6 +10991,12 @@ body {
   top: 200%;
 }
 
+.nav-admin-menu {
+  display: none;
+  top: 280px;
+  left: 705px;
+}
+
 .content {
   background-color: #f5efe0;
   padding-top: 100px;

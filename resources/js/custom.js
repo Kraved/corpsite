@@ -1,3 +1,21 @@
+// Панель навигации(карусель)
+let navAdminButton = document.querySelector('#nav-admin-btn');
+navAdminMenu = document.querySelector('#nav-admin-menu');
+navAdminButton.addEventListener('mouseenter', function () {
+    navAdminMenu.classList.add('show')
+});
+navAdminButton.addEventListener('mouseleave', function () {
+    navAdminMenu.classList.remove('show')
+});
+
+navAdminMenu.addEventListener('mouseenter', function () {
+    this.classList.add('show');
+});
+navAdminMenu.addEventListener('mouseleave', function () {
+    this.classList.remove('show');
+});
+
+
 // Добавление и удаление групп пользователя
 
 let groupPanel = document.querySelector('#user-group-panel');
@@ -32,3 +50,4 @@ groupPanel.addEventListener('click', function (event) {
         parent.parentNode.removeChild(parent);
     }
 });
+

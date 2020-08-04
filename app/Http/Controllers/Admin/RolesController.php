@@ -12,6 +12,10 @@ use Illuminate\View\View;
 class RolesController extends Controller
 {
 
+    /**
+     * UsersController constructor.
+     * Проверка пользователя на роль admin
+     */
     public function __construct()
     {
         $this->middleware('role:admin');

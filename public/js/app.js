@@ -49683,7 +49683,7 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./userGroup */ "./resources/js/userGroup.js");
+__webpack_require__(/*! ./custom */ "./resources/js/custom.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
@@ -49823,14 +49823,29 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/userGroup.js":
-/*!***********************************!*\
-  !*** ./resources/js/userGroup.js ***!
-  \***********************************/
+/***/ "./resources/js/custom.js":
+/*!********************************!*\
+  !*** ./resources/js/custom.js ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// Добавление и удаление групп пользователя
+// Панель навигации(карусель)
+var navAdminButton = document.querySelector('#nav-admin-btn');
+navAdminMenu = document.querySelector('#nav-admin-menu');
+navAdminButton.addEventListener('mouseenter', function () {
+  navAdminMenu.classList.add('show');
+});
+navAdminButton.addEventListener('mouseleave', function () {
+  navAdminMenu.classList.remove('show');
+});
+navAdminMenu.addEventListener('mouseenter', function () {
+  this.classList.add('show');
+});
+navAdminMenu.addEventListener('mouseleave', function () {
+  this.classList.remove('show');
+}); // Добавление и удаление групп пользователя
+
 var groupPanel = document.querySelector('#user-group-panel');
 addGroupMenu = document.querySelector('#user-add-group-menu');
 addGroupMenu.childNodes.forEach(function (item) {

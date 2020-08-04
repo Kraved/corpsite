@@ -23,14 +23,22 @@
                     <a class="nav-item-menu" data-toggle="dropdown" href="">
                         <img class="ellipsis-icon" src="{{ asset('images/ellipsis.svg') }}" alt="ellipsis">
                     </a>
+
                     <div class="dropdown-menu management-dropdown-menu">
                         <a class="dropdown-item" href="{{ route('news.management.index') }}">Новости</a>
                         <a class="dropdown-item" href="{{ route('documents.management.index') }}">Документы</a>
                         <a class="dropdown-item" href="{{ route('addressbook.management.index') }}">Адресная книга</a>
                         <a class="dropdown-item" href="{{ route('birthday.management.index') }}">Дни Рождения</a>
                         <a class="dropdown-item" href="{{ route('links.management.index') }}">Ссылки</a>
+                        <a class="dropdown-item" id="nav-admin-btn" href="#">Администрирование</a>
                     </div>
                 </div>
+
+                <div class="dropdown-menu management-dropdown-menu nav-admin-menu" id="nav-admin-menu">
+                    <a class="dropdown-item" href="{{ route('admin.users.index') }}">Пользователи</a>
+                    <a class="dropdown-item" href="{{ route('admin.roles.index') }}">Группы</a>
+                </div>
+
                 <div class="nav-item"><a href="{{ route('logout') }}"
                                          onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
@@ -43,9 +51,3 @@
 
     </div>
 </nav>
-{{--<div class="dropdown">--}}
-{{--    <button class="btn btn-primary " type="button"  >--}}
-{{--        Кнопка выпадающего списка--}}
-{{--    </button>--}}
-
-{{--</div>--}}

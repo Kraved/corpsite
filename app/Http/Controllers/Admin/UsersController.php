@@ -13,6 +13,10 @@ use Illuminate\View\View;
 class UsersController extends Controller
 {
 
+    /**
+     * UsersController constructor.
+     * Проверка пользователя на роль admin
+     */
     public function __construct()
     {
         $this->middleware('role:admin');
@@ -52,7 +56,6 @@ class UsersController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->all();
-//        dd($data);
         if (isset($data['roles'])) {
             app(User::class)->swapRoles($data['userName'], $data['roles']);
         }

@@ -17,6 +17,7 @@ class RoleMiddleware
      */
     public function handle($request, Closure $next, string $roleName)
     {
+        abort_if(! Auth::check(), 401);
         if (! Auth::user()->checkRole('admin')) {
             abort_if(! Auth::user()->roles->contains('name', $roleName), 403);
         }

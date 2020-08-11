@@ -9,6 +9,7 @@ use App\Http\Requests\Management\NewsRequest;
 use App\Model\News;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class NewsController extends Controller
@@ -57,7 +58,7 @@ class NewsController extends Controller
 
         $data = $request->all();
         $data['user_id'] = Auth::user()->id;
-        $model = new News();
+        $model = app(News::class);
         $result = $model->create($data);
         if ($result) {
             return redirect()

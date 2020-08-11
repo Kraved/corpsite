@@ -22,7 +22,6 @@
 <body>
 <main class="main">
     @include('nav.nav')
-{{--    Добавить отображение navbar в зависимости от аутентификации --}}
     @if($errors->any())
         @include('layouts.includes.errors_block')
     @endif
@@ -33,4 +32,8 @@
     @yield('content')
 
 </main>
+
+<footer>
+    @include('footer.footer')
+</footer>
 </body>

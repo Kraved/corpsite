@@ -10928,18 +10928,17 @@ a.text-dark:focus {
   }
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
 html {
   font-size: 1em;
 }
 
 body {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+}
+
+article {
+  margin-bottom: 15px;
+  padding-bottom: 30px;
 }
 
 .content-title {
@@ -11135,5 +11134,15 @@ body {
   position: absolute;
   right: 0;
   top: 1px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.exchange-rate {
+  width: 20rem;
+  text-align: center;
 }
 

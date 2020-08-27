@@ -45,8 +45,8 @@ class CbrRuExchangeRate implements ExchangeRate
     public function getDollarRate():string
     {
         $xml = $this->curlHandler();
-        $parserXML = new SimpleXMLElement($xml);
-        return $parserXML->xpath('Valute[@ID="R01235"]')[0]->Value;
+        $parserXML = simplexml_load_string($xml, SimpleXMLElement::class, LIBXML_NOERROR);
+        return $parserXML ? $parserXML->xpath('Valute[@ID="R01235"]')[0]->Value : 'Не удалось получить курс долара';
     }
 
     /**
@@ -56,8 +56,8 @@ class CbrRuExchangeRate implements ExchangeRate
     public function getEuroRate():string
     {
         $xml = $this->curlHandler();
-        $parserXML = new SimpleXMLElement($xml);
-        return $parserXML->xpath('Valute[@ID="R01239"]')[0]->Value;
+        $parserXML = simplexml_load_string($xml, SimpleXMLElement::class, LIBXML_NOERROR);
+        return $parserXML ? $parserXML->xpath('Valute[@ID="R01239"]')[0]->Value : 'Не удалось получить курс евро';
 
     }
 
@@ -68,7 +68,7 @@ class CbrRuExchangeRate implements ExchangeRate
     public function getDate():string
     {
         $xml = $this->curlHandler();
-        $parserXML = new SimpleXMLElement($xml);
-        return $parserXML->attributes()['Date'];
+        $parserXML = simplexml_load_string($xml, SimpleXMLElement::class, LIBXML_NOERROR);
+        return $parserXML ? $parserXML->attributes()['Date'] : 'Не удалось получить дату';
     }
 }
